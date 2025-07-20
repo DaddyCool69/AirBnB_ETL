@@ -1,0 +1,49 @@
+{
+	"name": "FinalPipeline",
+	"properties": {
+		"activities": [
+			{
+				"name": "RunCustomerDim",
+				"type": "ExecutePipeline",
+				"dependsOn": [],
+				"policy": {
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"pipeline": {
+						"referenceName": "ADLS_To_SynapseDWH",
+						"type": "PipelineReference"
+					},
+					"waitOnCompletion": true
+				}
+			},
+			{
+				"name": "BookingDIm",
+				"type": "ExecutePipeline",
+				"dependsOn": [
+					{
+						"activity": "RunCustomerDim",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"policy": {
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"pipeline": {
+						"referenceName": "Cosmos_To_Synapse",
+						"type": "PipelineReference"
+					},
+					"waitOnCompletion": true
+				}
+			}
+		],
+		"annotations": [],
+		"lastPublishTime": "2025-07-20T12:57:16Z"
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
+}

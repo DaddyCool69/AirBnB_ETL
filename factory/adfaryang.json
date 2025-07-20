@@ -1,0 +1,9 @@
+{
+	"name": "adfaryang",
+	"location": "centralus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "254bff29-fe0d-4728-a22d-c0c91c4e77a5",
+		"tenantId": "bd725e2a-4672-4b95-a0e4-cf501ea3c7a8"
+	}
+}
