@@ -1,0 +1,51 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"workspaceName": {
+			"value": "synapsearyang"
+		},
+		"ADLSAirBnB_accountKey": {
+			"value": ""
+		},
+		"ASAAirBnB_password": {
+			"value": ""
+		},
+		"CDMAirBnB_connectionString": {
+			"value": ""
+		},
+		"fintechADLS_accountKey": {
+			"value": ""
+		},
+		"synapsearyang-WorkspaceDefaultSqlServer_connectionString": {
+			"value": "Integrated Security=False;Encrypt=True;Connection Timeout=30;Data Source=tcp:synapsearyang.sql.azuresynapse.net,1433;Initial Catalog=@{linkedService().DBName}"
+		},
+		"ADLSAirBnB_properties_typeProperties_url": {
+			"value": "https://airbnbaryan.dfs.core.windows.net/"
+		},
+		"ASAAirBnB_properties_typeProperties_server": {
+			"value": "synapsearyang.sql.azuresynapse.net"
+		},
+		"ASAAirBnB_properties_typeProperties_database": {
+			"value": "airbnb"
+		},
+		"ASAAirBnB_properties_typeProperties_userName": {
+			"value": "aryan"
+		},
+		"AzureKeyVault_properties_typeProperties_baseUrl": {
+			"value": "https://keyvaultaryang.vault.azure.net/"
+		},
+		"AzureSynapseAnalyticsTest_properties_typeProperties_server": {
+			"value": "synapsearyang.sql.azuresynapse.net"
+		},
+		"AzureSynapseAnalyticsTest_properties_typeProperties_database": {
+			"value": "airbnb"
+		},
+		"fintechADLS_properties_typeProperties_url": {
+			"value": "https://airbnbaryan.dfs.core.windows.net/"
+		},
+		"synapsearyang-WorkspaceDefaultStorage_properties_typeProperties_url": {
+			"value": "https://airbnbaryan.dfs.core.windows.net"
+		}
+	}
+}
